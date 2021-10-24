@@ -1,7 +1,7 @@
 # Maintainer: Husam Bilal <me@husam.dev>
 
 pkgname=cliphist
-pkgver=0.1.0
+pkgver=0.2.0
 pkgrel=1
 pkgdesc="clipboard history 'manager' for wayland"
 url="https://github.com/sentriz/cliphist"
