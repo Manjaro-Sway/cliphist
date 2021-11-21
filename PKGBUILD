@@ -6,7 +6,7 @@ pkgrel=2
 epoch=1
 _tag='5a4258fa72c0e34625f949c8114da9ae46c91b6f'
 pkgdesc='clipboard history “manager” for wayland'
-arch=('i686' 'x86_64')
+arch=('i686' 'x86_64' 'aarch64')
 url="https://github.com/sentriz/$pkgname"
 license=('GPL3')
 depends=('wl-clipboard')
@@ -18,7 +18,7 @@ sha256sums=('381b92356e76229c5d15c2d42b3ee63734b7463aacbd200087abd6ed3c30c5ce')
 
 build() {
   cd "$srcdir/$pkgname-$pkgver"
-  export GOFLAGS="-buildmode=pie -trimpath -modcacherw"
+  export GOFLAGS="-buildmode=pie -trimpath -modcacherw -buildvcs=false"
   go build -o $pkgname
 }
 
