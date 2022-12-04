@@ -18,7 +18,7 @@ sha256sums=('381b92356e76229c5d15c2d42b3ee63734b7463aacbd200087abd6ed3c30c5ce')
 
 build() {
   cd "$srcdir/$pkgname-$pkgver"
-  export GOFLAGS="-buildmode=pie -trimpath -modcacherw"
+  export GOFLAGS="-buildmode=pie -trimpath -modcacherw -buildvcs=false"
   go build -o $pkgname
 }
 
